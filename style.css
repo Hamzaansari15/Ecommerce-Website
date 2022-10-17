@@ -5,89 +5,201 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-#group
+body
 {
-    /* visibility: hidden; */
+    background: #fff;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
 }
 header
 {
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgray;
     width: 100%;
     height: 80px;
+    background: #fff;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 22%), inset 0 -1px 0 0 #dadce0;
 }
 #logo
 {
     position: relative;
-    left: 4em;
-    font-size: 2em;
-    font-weight: 600;
-    color: palevioletred;
+    left: 3em;
     text-decoration: none;
-    /* visibility: hidden; */
+    font-size: 2.5em;
+    font-weight: 700;
+    color: palevioletred;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
-#navigation 
+#group
 {
     display: flex;
     position: relative;
-    gap: 30px;
     align-items: center;
-    right: 50px;
+    right: 3em;
 }
-#navigation.active
+#navigation
 {
-    visibility: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
 }
 #navigation > li
 {
     list-style: none;
     position: relative;
-    top: 8px;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    margin-left: 30px;
 }
 #navigation > li > a
 {
     text-decoration: none;
-    color: palevioletred;
-    font-size: 1.25em;
     text-transform: uppercase;
-    font-weight: 500;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: palevioletred;
 }
-#dropdown
+#navigation > li > a::before
+{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    content: '';
+    bottom: 2px;
+    background: palevioletred;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+#navigation > li > a:hover:before
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+#icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3px;
+}
+#search
 {
     position: relative;
-    top: 8px;
-    background-color: lightgray;
-    border: none;
-    color: palevioletred;
-    font-size: 1.25em;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
+#close_btn 
+{
+    opacity: 0;
+    visibility: hidden;
+    font-size: 1.25em;
+    position: relative;
+    color: palevioletred;
+    cursor: pointer;
+    z-index: 10;
+}
+#close_btn.active
+{
+    visibility: visible;
+    opacity: 1;
+    left: 20px;
+    transition: 0.5s ease-in-out;
+} 
 #search_btn
 {
-    color: palevioletred;
     font-size: 1.25em;
+    position: relative;
+    color: palevioletred;
+    cursor: pointer;
+    z-index: 10;
+    left: 30px;
+    transition: 0.5s ease-in-out;
+}
+#search_btn.active
+{
+    left: 0%;
 }
 #search_bar
-{ 
-    width: 100%;
+{
     position: absolute;
-    padding: 10px;
-    visibility: hidden;
-
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+#search_bar.active
+{
+    right: 0%;
 }
 #search_bar > input
 {
     width: 100%;
+    height: 50px;
     outline: none;
     border: none;
-    background-color: lightgray;
-    border-bottom: 2px solid gray;
+    font-size: 1.5em;
+    color: palevioletred;
+    border-bottom: 2px palevioletred solid;
 }
 #search_bar > input::placeholder
 {
-    font-size: 1.25em;
     color: palevioletred;
+}
+#menu
+{
+    opacity: 0;
+    visibility: hidden;
+}
+@media only screen and (max-width: 800px)  {
+    #search_btn
+    {
+        left: 0%;
+    }
+    #menu
+    {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+        font-size: 1.5em;
+        color: palevioletred;
+        transition: 0.5s ease-in-out;
+    }
+    #menu.active
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+    header #navigation
+    {
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+        opacity: 0;
+    }
+    header.open #navigation
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        visibility: visible;
+        opacity: 1;
+        left: 0%;
+        z-index: 10;
+
+    }
 }
