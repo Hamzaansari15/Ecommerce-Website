@@ -21,26 +21,31 @@
         <div id="group">
             <ul id="navigation">
                 <li><a href="#">home</a></li>
-                <li><a href="#">brand</a></li>
-                <li><a href="#">about</a></li>
+                <div id="dropdown" class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      brand
+                    </a>
+                    <ul class="dropdown-menu">
+                      <a class="dropdown-item" href="#"></a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </ul>
+                  </div>
+                <li><a href="#">category</a></li>
                 <li><a href="#">contact us</a></li>
             </ul>
                 <div id="icon">
                     <span id="search">
-                        <span id="search_btn"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
-                        <span id="close_btn"><i class="fa-solid fa-xmark"></i></span>
-                    </span>
-                    <div>
-                        <span id="menu"><i class="fa-solid fa-bars"></i></span>
+                    <i class="fa-sharp fa-solid fa-magnifying-glass" id="search_btn"></i>
+                    <i class="fa-solid fa-xmark" id="close_btn"></i>
+                </span>
+                <div>
+                        <i class="fa-solid fa-bars" id="menu"></i>
                     </div>
                 </div>
         </div>
         <div id="search_bar"><input placeholder="Search here . . ." type="text" name="" id=""></div>
     </header>
-
-
-
-
 
 
     <script src="app.js"></script>
