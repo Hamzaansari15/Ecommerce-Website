@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/83cf4209f0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,17 +22,17 @@
             <ul id="navigation">
                 <li><a href="#">home</a></li>
                 <div id="dropdown" class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      brand
-                    </a>
+                    <span class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span id="brand_text">category</span>
+                    </span>
                     <ul class="dropdown-menu">
                       <a class="dropdown-item" href="#"></a>
                       <a class="dropdown-item" href="#">Another action</a>
                       <a class="dropdown-item" href="#">Something else here</a>
                     </ul>
                   </div>
-                <li><a href="#">category</a></li>
-                <li><a href="#">contact us</a></li>
+                <li><a href="#">product</a></li>
+                <li><a href="#">about us</a></li>
             </ul>
                 <div id="icon">
                     <span id="search">
@@ -46,7 +46,27 @@
         </div>
         <div id="search_bar"><input placeholder="Search here . . ." type="text" name="" id=""></div>
     </header>
-
+    <div id="banner_image"><div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="image/banners/18220447_Real-Estate-Facebook-Cover-Banner-30.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img class="image" src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="image_div" class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div></div>
 
     <script src="app.js"></script>
 </body>
