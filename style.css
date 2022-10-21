@@ -14,7 +14,7 @@ body
 }
 header
 {
-    position: absolute;
+    position: sticky;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -25,6 +25,8 @@ header
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 22%), inset 0 -1px 0 0 #dadce0;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
 }
 #logo
 {
@@ -190,7 +192,7 @@ header #icon
         top: 80px;
         opacity: 1;
         visibility: visible;
-        left: 0;
+        left: 0px;
         display: flex;
         flex-direction: column;
         background: #fff;
@@ -214,7 +216,7 @@ header #icon
 /* BOOTSTRAP STYLING */
 
 
-#dropdown > a
+#dropdown > span 
 {
     background-color: #fff!important;
     color: palevioletred;
@@ -224,22 +226,7 @@ header #icon
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
-#dropdown > a::before
+#banner_image
 {
-    content: ''!important;
-    position: absolute!important;
-    bottom: -2px!important;
-    width: 100%!important;
-    height: 3px!important;
-    background: palevioletred!important;
-    transform: scaleX(0)!important;
-    transition: transform 0.5s ease-in-out!important;
-    transform-origin: right!important;
-    color: palevioletred!important;
-}
-#dropdown > a::before:hover
-{
-    transform: scaleX(1)!important;
-    transform-origin: left!important;
-    color: palevioletred!important;
+    margin-top: 100px;
 }
