@@ -255,24 +255,32 @@ header #icon
     justify-content: center;
     color: palevioletred;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 600;
     letter-spacing: 0.1em;
 }
-/* #new_arrival_card 
+#all_card
 {
     display: flex;
+    justify-content: center;
+    position: relative;
+    top: 2em;
+    flex-wrap: wrap;
 }
-.new_arrival_card
-{
-    padding: 1em;
-} */
 #card
 {
+    border: 2px solid palevioletred;
     width: 20em;
-    background-color: aqua;
-    height: 30em;
-    border-radius: 1em;
+    background-color: white;
+    height: fit-content;
+    border-radius: 0.7em;
+    margin-bottom: 3em;
+    margin: 2em;
+    box-shadow: 5px 5px 15px gray;
+}
+#card:hover
+{
+    opacity: 0.7;
 }
 #card_image
 {
@@ -284,4 +292,17 @@ header #icon
     height: 100%;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
+}
+#description
+{
+    position: relative;
+    margin: 1em;
+    padding: 0.8em;
+}
+#description > p
+{
+    color: palevioletred;
+    font-size: 1.2em;
+    font-weight: 500;
+    /* text-transform: capitalize; */
 }
