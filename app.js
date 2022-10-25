@@ -26,11 +26,38 @@ const getData = () => {
             return Response.json();
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
             for(let i = 0; i < data.length; i++){
                 // console.log(data[i]);
+                let image = data[i].image;
                 console.log(data[i].title);
                 let title = data[i].title;
+                if(true){
+                    console.log('hamza');
+                    
+                }
+                console.log(data[i].category);
+                let category = data[i].category;
+                console.log(data[i].price);
+                let price = data[i].price;
+                let discountPrice = price/10;
+                let discount = price - discountPrice;
+                console.log(data[i].rating);
+                let ratings = data[i].rating; 
+                console.log(ratings.rate);
+                let rate = ratings.rate;      
+                let allCard = document.getElementById('all_card');
+                let card = `<div id="card">
+                <div id="card_image"><img id="image" src=${image} alt=""
+                    srcset=""></div>
+                    <div id="description">
+                      <p id="title">${title}</p>
+                      <p id="category">category : ${category}</p>
+                      <p id="price">Price : <s>${price}</s>  ${discount}</p>
+                      <p id="rating">Rating : ${rate}</p>
+                    </div>
+              </div>`;
+              allCard.innerHTML += card;
             }
         })
 } 
