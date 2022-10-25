@@ -235,4 +235,53 @@ header #icon
     {
         height: 300px;
     }
+}   
+@media only screen and (max-width: 600px){
+    #banner img
+        {
+            height: 200px;
+        }
+    }
+#main_body
+{
+    /* display: flex;
+    justify-content: center;*/
+    position: relative;
+    top: 3em; 
+}    
+#heading1
+{
+    display: flex;
+    justify-content: center;
+    color: palevioletred;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+/* #new_arrival_card 
+{
+    display: flex;
+}
+.new_arrival_card
+{
+    padding: 1em;
+} */
+#card
+{
+    width: 20em;
+    background-color: aqua;
+    height: 30em;
+    border-radius: 1em;
+}
+#card_image
+{
+    width: 100%;
+    height: 14em;
+}
+#card_image > img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
