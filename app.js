@@ -28,7 +28,6 @@ const getData = () => {
         .then(data => {
             // console.log(data);
             for(let i = 0; i < data.length; i++){
-                // console.log(data[i]);
                 let image = data[i].image;
                 console.log(data[i].title);
                 let title = data[i].title;
