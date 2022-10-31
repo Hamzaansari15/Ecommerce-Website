@@ -28,14 +28,15 @@ header
     z-index: 10;
     transition: all 0.5s ease-in-out;
 }
-#logo
+#logo img
 {
-    color: palevioletred;
-    text-decoration: none;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    height: 80px;
+    width: 120px;  
+}
+#logo img:hover
+{
+    transform: scale(1.1);
+    transition: all 1.5s;
 }
 #group
 {
@@ -400,7 +401,7 @@ footer
 #footer_logo > #logo_heading ,#footer_links > #links_heading,#contact_heading,#follow_heading
 {
     font-size: 2em;
-    color: palevioletred;
+    color: black;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -409,7 +410,7 @@ footer
 }
 #footer_logo > #footer_text ,#footer_links .links,.contact
 {
-    color: palevioletred;
+    color: black;
     font-size: 1.1em;
     font-weight: 600;
     word-spacing: 10px;
@@ -430,30 +431,30 @@ footer
 }
 #footer_links .links:hover
 {
-    color: black;
-    transition: all 1.5s;
+    color: palevioletred;
+    transition: all 1s;
 }
-#footer_contact .contact:hover
+#footer_contact p:hover
 {
-    color: black;
-    transition: all 1.5s;
+    color: palevioletred;
+    transition: all 1s;
 }
 #footer_icon > i
 {
     margin-top: 1em;
     font-size: 2em;
 }
-i
+footer i
 {
     margin: 8px;
     cursor: pointer;
-    color: palevioletred;
+    color: black;
 }
-i:hover
+footer i:hover
 {
     transform: scale(1.2);
     transition: all 1.5s;
-    color: black;
+    color: palevioletred
 }
 #copy_right
 {
@@ -480,4 +481,18 @@ i:hover
     width: 1em;
     height: 1em;
     margin-right: 5px;
+}
+
+
+/* ---------------- WORKING END FOR HOME PAGE ------------------------ */
+
+
+#banner, #main_body, footer, #copy_right
+{
+    display: none;
+}
+#arrow_btn i
+{
+    width: 40em;
+    height: 40em;
 }
