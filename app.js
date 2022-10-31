@@ -1,3 +1,5 @@
+//             <---------------- NAVIGATION AND OTHER FUNCTIONALITY START --------->
+
 let searchBtn = document.getElementById('search_btn');
 let closeBtn = document.getElementById('close_btn');
 let searchBar = document.getElementById('search_bar');
@@ -19,12 +21,34 @@ closeBtn.addEventListener('click', () => {
 menuToggle.addEventListener('click', () => {
     header.classList.toggle('show')
 });
+
+//             <---------------- NAVIGATION AND OTHER FUNCTIONALITY END --------->
+
+//             <---------------- GET DATE FOR COPY RIGHT START ------------>
+
+
 const getDate = () => {
     let year = new Date().getFullYear();
 let date = document.getElementById('date');
 date.innerHTML = year;
 };
 getDate();
+
+//             <---------------- GET DATE FOR COPY RIGHT END ------------>
+
+//             <---------------- WORKING FOR PRODUCT SHOW INTO CART ------------>
+
+
+const showData = () => {
+    
+}
+
+window.showData = showData;
+//             <---------------- WORKING FOR PRODUCT SHOW INTO CART ------------>
+
+//             <---------------- FETCHING DATA FROM API FOR HOME PAGE START ------------>
+
+
 const getData = () => {
     let url = 'https://fakestoreapi.com/products'
     fetch(url)
@@ -42,7 +66,7 @@ const getData = () => {
                 let ratings = data[i].rating;
                 let rate = ratings.rate;
                 let allCard = document.getElementById('all_card');
-                let card = `<div id="card">
+                let card = `<div onclick="showData()" id="card">
                                <div id="card_image"><img id="image" src=${image} alt=""srcset=""></div>
                                <div id="description">
                                     <p id="title">${title}</p>
@@ -57,7 +81,9 @@ const getData = () => {
 }
 getData();
 
-// Another Fetching DATA
+//             <---------------- FETCHING DATA FROM API FOR HOME PAGE END ------------>
+
+//             <---------------- FETCHING ANOTHER DATA FROM API FOR PRODUCT PAGE START ------------>
 
 
 let url = 'https://api.escuelajs.co/api/v1/products';
