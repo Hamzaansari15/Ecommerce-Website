@@ -56,6 +56,7 @@ const getData = () => {
             return Response.json();
         })
         .then(data => {
+            console.log(data)
             for (let i = 0; i < data.length; i++) {
                 let image = data[i].image;
                 let title = data[i].title.split(' ').slice(0,4).join(' ');
