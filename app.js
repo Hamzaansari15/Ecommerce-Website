@@ -36,7 +36,7 @@ getDate();
 
 //             <---------------- GET DATE FOR COPY RIGHT END ------------>
 
-//             <---------------- WORKING FOR PRODUCT SHOW INTO CART ------------>
+//             <---------------- WORKING FOR PRODUCT SHOW INTO CART START ------------>
 
 
 const showData = () => {
@@ -44,7 +44,7 @@ const showData = () => {
 }
 
 window.showData = showData;
-//             <---------------- WORKING FOR PRODUCT SHOW INTO CART ------------>
+//             <---------------- WORKING FOR PRODUCT SHOW INTO CART END ------------>
 
 //             <---------------- FETCHING DATA FROM API FOR HOME PAGE START ------------>
 
@@ -72,7 +72,7 @@ const getData = () => {
                                <div id="description">
                                     <p id="title">${title}</p>
                                     <p id="category">category : ${category}</p>
-                                    <p id="price">Price : <del>${price}$</del>  ${discount}$</p>
+                                    <p id="price">Price : <del>${price}$</del> <span>${discount}$</span></p>
                                     <p id="rating">Rating : ${rate}</p>
                                </div>
                             </div>`;
