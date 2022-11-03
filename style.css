@@ -28,7 +28,7 @@ header
     z-index: 10;
     transition: all 0.5s ease-in-out;
 }
-#logo img
+#header_logo img
 {
     height: 80px;
     width: 120px;  
@@ -272,7 +272,7 @@ header #icon
     display: flex;
     justify-content: center;
     position: relative;
-    top: 2em;
+    top: 1em;
     flex-wrap: wrap;
 }
 #card
@@ -283,7 +283,7 @@ header #icon
     height: 30em;
     border-radius: 0.7em;
     margin-bottom: 3em;
-    margin: 2em;
+    margin: 1.5em;
     padding: 5px;
     box-shadow: 5px 5px 15px gray;
 }
@@ -327,10 +327,16 @@ header #icon
     font-size: 1.2em;
     font-weight: 500;
 }
+#description span
+{
+    color: black;
+    font-weight: 500;
+    font-size: 1.1em;
+}
 footer
 {
     position: relative;
-    top: 6em;
+    top: 7em;
     width: 100%;
     height: fit-content;
     background-color: white;
@@ -344,16 +350,18 @@ footer
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     width: 80%;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 #footer_logo
 {
     width: 20em;
-    position: relative;
-    margin-right: 6em;
-    margin-top: 4px;
+}
+#logo img
+{
+    height: 80px;
+    width: 120px;
 }
 @media only screen and (max-width: 1450px)
 {
@@ -416,10 +424,13 @@ footer
     word-spacing: 10px;
     text-align: justify;
 }
+#footer_links p, #footer_contact p
+{
+    margin-top: 1.8em;
+}
 #footer_links,#footer_contact,#footer_follow
 {
     width: 15em;
-    margin-bottom: 1em;
 }
 #footer_links .links
 {
@@ -427,7 +438,6 @@ footer
     cursor: pointer;
     font-weight: 600;
     text-decoration: none;
-    margin-top: 1.2em;
 }
 #footer_links .links:hover
 {
@@ -441,7 +451,7 @@ footer
 }
 #footer_icon > i
 {
-    margin-top: 1em;
+    margin-top: 1.9em;
     font-size: 2em;
 }
 footer i
@@ -462,17 +472,15 @@ footer i:hover
     height: 4em;
     background-color: #dadce0;
     position: relative;
-    top: 4em;
-}
-#copy_right
-{
+    top: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #copy_right p
 {
-    margin-top: 1em;
+    position: relative;
+    top: 0.5em;
     font-size: 1.2em;
     margin-right: 1em;
 }
@@ -487,10 +495,6 @@ footer i:hover
 /* ---------------- WORKING END FOR HOME PAGE ------------------------ */
 
 
-#banner, #main_body, footer, #copy_right
-{
-    display: none;
-}
 #main_product
 {
     width: 30em;
@@ -505,6 +509,10 @@ footer i:hover
     border-radius: 1em;
     height: 35em;
     width: 50em;
+}
+#product_description
+{
+    margin-top: 1em;
 }
 #product_description p
 {
@@ -529,7 +537,7 @@ footer i:hover
 {
     display: flex;
     position: relative;
-    top: 6em;
+    top: 3em;
     gap: 20em;
     align-items: center;
 }
