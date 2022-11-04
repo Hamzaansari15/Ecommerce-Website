@@ -468,7 +468,6 @@ footer i:hover
 }
 #copy_right
 {
-    width: 100%;
     height: 4em;
     background-color: #dadce0;
     position: relative;
@@ -497,12 +496,10 @@ footer i:hover
 
 #main_product
 {
-    width: 30em;
-    display: flex;
+    display: none;
     position: relative;
-    gap: 60px;
-    justify-content: space-between;
     margin: 6em;
+    margin-left: 35em;
 }
 #product_image img
 {
@@ -513,6 +510,7 @@ footer i:hover
 #product_description
 {
     margin-top: 1em;
+    width: 50em;
 }
 #product_description p
 {
@@ -538,7 +536,7 @@ footer i:hover
     display: flex;
     position: relative;
     top: 3em;
-    gap: 20em;
+    gap:12em;
     align-items: center;
 }
 #saved_btn > button, #cart_btn > button
@@ -569,4 +567,82 @@ footer i:hover
 #saved_btn i, #cart_btn i
 {
     margin-right: 6px;
+}
+
+/*                       RESPONSIVE THE SHOW PRODUCT  */
+
+@media only screen and (max-width: 1600px) 
+{
+    #main_product
+    {
+        margin-left: 28em;
+    }
+}
+
+@media only screen and (max-width: 1400px) 
+{
+    #main_product
+    {
+        margin-left: 21em;
+    }
+}
+@media only screen and (max-width: 1200px) 
+{
+    #main_product
+    {
+        margin-left: 10em;
+    }
+}
+@media only screen and (max-width: 1000px) 
+{
+    #main_product
+    {
+        margin: 5em;
+    }
+    #product_image img
+    {
+        width: 100%;
+        height: 28em;
+    }
+    #product_description
+    {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 700px) 
+{
+    #main_product
+    {
+        margin: 2em;
+    }
+    #product_image img
+    {
+        width: 100%;
+        height: 20em;
+    }
+    #product_description
+    {
+        width: 100%;
+    }
+    #product_btn
+    {
+        gap: 8em;
+    }
+    #saved_btn > button, #cart_btn > button
+    {
+        width: 9em;
+    }
+}
+@media only screen and (max-width: 500px)
+{
+    #main_product
+    {
+        margin: 15px;
+    }
+    #product_btn
+    {
+        gap: 2em;
+        font-size: 0.8em;
+    }
 }
