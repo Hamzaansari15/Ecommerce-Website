@@ -40,7 +40,14 @@ getDate();
 
 
 const showData = () => {
-    
+    let header = document.getElementById('banner');
+    header.style.display = 'none';
+    let body = document.getElementById('main_body');
+    body.style.display = 'none';
+    let footer = document.getElementById('main_footer');
+    footer.style.display = 'none';
+    let mainProduct = document.getElementById('main_product');
+    mainProduct.style.display = 'block';
 }
 
 window.showData = showData;
@@ -56,11 +63,11 @@ const getData = () => {
             return Response.json();
         })
         .then(data => {
-            console.log(data)
+            // console.log(data)
             for (let i = 0; i < data.length; i++) {
                 let image = data[i].image;
                 let title = data[i].title.split(' ').slice(0,4).join(' ');
-                let category = data[i].category;
+                let category = data[i].category.split(' ').slice(0,1);;
                 let price = data[i].price;
                 let discountPrice = price / 10;
                 let discount = (price - discountPrice).toFixed();
@@ -71,9 +78,9 @@ const getData = () => {
                                <div id="card_image"><img id="image" src=${image} alt=""srcset=""></div>
                                <div id="description">
                                     <p id="title">${title}</p>
-                                    <p id="category">category : ${category}</p>
+                                    <p id="category">category :<span> ${category}</span></p>
                                     <p id="price">Price : <del>${price}$</del> <span>${discount}$</span></p>
-                                    <p id="rating">Rating : ${rate}</p>
+                                    <p id="rating">Rating : <span>${rate}</span></p>
                                </div>
                             </div>`;
                 allCard.innerHTML += card;
@@ -87,11 +94,3 @@ getData();
 //             <---------------- FETCHING ANOTHER DATA FROM API FOR PRODUCT PAGE START ------------>
 
 
-let url = 'https://api.escuelajs.co/api/v1/products';
-fetch(url)
-.then((Response) => {
-    return Response.json();
-})
-.then((data) => {
-    console.log(data);
-})
