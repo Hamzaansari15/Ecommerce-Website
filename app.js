@@ -29,29 +29,15 @@ menuToggle.addEventListener('click', () => {
 
 const getDate = () => {
     let year = new Date().getFullYear();
-let date = document.getElementById('date');
-date.innerHTML = year;
+    let date = document.getElementById('date');
+    date.innerHTML = year;
 };
 getDate();
 
 //             <---------------- GET DATE FOR COPY RIGHT END ------------>
 
-//             <---------------- WORKING FOR PRODUCT SHOW INTO CART START ------------>
 
 
-const showData = () => {
-    let header = document.getElementById('banner');
-    header.style.display = 'none';
-    let body = document.getElementById('main_body');
-    body.style.display = 'none';
-    let footer = document.getElementById('main_footer');
-    footer.style.display = 'none';
-    let mainProduct = document.getElementById('main_product');
-    mainProduct.style.display = 'block';
-}
-
-window.showData = showData;
-//             <---------------- WORKING FOR PRODUCT SHOW INTO CART END ------------>
 
 //             <---------------- FETCHING DATA FROM API FOR HOME PAGE START ------------>
 
@@ -66,21 +52,23 @@ const getData = () => {
             // console.log(data)
             for (let i = 0; i < data.length; i++) {
                 let image = data[i].image;
-                let title = data[i].title.split(' ').slice(0,4).join(' ');
-                let category = data[i].category.split(' ').slice(0,1);;
+                let title = data[i].title.split(' ').slice(0, 4).join(' ');
+                let category = data[i].category.split(' ').slice(0, 1);;
                 let price = data[i].price;
                 let discountPrice = price / 10;
                 let discount = (price - discountPrice).toFixed();
                 let ratings = data[i].rating;
                 let rate = ratings.rate;
                 let allCard = document.getElementById('all_card');
-                let card = `<div onclick="showData()" id="card">
+                let card = `<div id="card">
                                <div id="card_image"><img id="image" src=${image} alt=""srcset=""></div>
                                <div id="description">
                                     <p id="title">${title}</p>
                                     <p id="category">category :<span> ${category}</span></p>
                                     <p id="price">Price : <del>${price}$</del> <span>${discount}$</span></p>
                                     <p id="rating">Rating : <span>${rate}</span></p>
+                                   <a><div id="cart_btn"><button><i class="fa-solid fa-cart-shopping"></i><span class="icon_text">Add to
+                                    cart</span></button></div></a>
                                </div>
                             </div>`;
                 allCard.innerHTML += card;
@@ -91,6 +79,15 @@ getData();
 
 //             <---------------- FETCHING DATA FROM API FOR HOME PAGE END ------------>
 
-//             <---------------- FETCHING ANOTHER DATA FROM API FOR PRODUCT PAGE START ------------>
+//             <-----------------WORKING FOR SIGNUP AND SIGNIN PAGE ------------------>
+
+let signup = document.getElementById('signup');
+signup.addEventListener('click', () => {
+    console.log('hamza')
+   let signupForm = document.getElementById('signup_form');
+   signupForm.style.display = 'block' 
+})
+
+
 
 
