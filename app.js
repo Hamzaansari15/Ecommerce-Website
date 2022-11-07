@@ -41,7 +41,20 @@ getDate();
 
 //             <---------------- FETCHING DATA FROM API FOR HOME PAGE START ------------>
 
-
+const buyItem = () => {
+    let cancelIcon = document.getElementById('cancel_icon');
+    cancelIcon.addEventListener('click', () => {
+        buyModal.classList.remove('show');
+    });
+    let buyModal = document.getElementById('buy_modal');
+    buyModal.classList.add('show');
+}
+const buyDone = () => {
+    swal("Purchased Successful", "", "success")
+    .then(() =>{
+        location.reload();
+    })
+}
 const getData = () => {
     let url = 'https://fakestoreapi.com/products'
     fetch(url)
@@ -49,7 +62,10 @@ const getData = () => {
             return Response.json();
         })
         .then(data => {
-            // console.log(data)
+            if (data) {
+                let loader = document.getElementById('loader_icon');
+                loader.style.display = 'none'
+            }
             for (let i = 0; i < data.length; i++) {
                 let image = data[i].image;
                 let title = data[i].title.split(' ').slice(0, 4).join(' ');
@@ -67,7 +83,7 @@ const getData = () => {
                                     <p id="category">category :<span> ${category}</span></p>
                                     <p id="price">Price : <del>${price}$</del> <span>${discount}$</span></p>
                                     <p id="rating">Rating : <span>${rate}</span></p>
-                                   <a><div id="cart_btn"><button><i class="fa-solid fa-cart-shopping"></i><span class="icon_text">Add to
+                                   <a><div onclick = 'buyItem()' id="cart_btn"><button><i class="fa-solid fa-cart-shopping"></i><span class="icon_text">Add to
                                     cart</span></button></div></a>
                                </div>
                             </div>`;
@@ -78,16 +94,4 @@ const getData = () => {
 getData();
 
 //             <---------------- FETCHING DATA FROM API FOR HOME PAGE END ------------>
-
-//             <-----------------WORKING FOR SIGNUP AND SIGNIN PAGE ------------------>
-
-let signup = document.getElementById('signup');
-signup.addEventListener('click', () => {
-    console.log('hamza')
-   let signupForm = document.getElementById('signup_form');
-   signupForm.style.display = 'block' 
-})
-
-
-
 
