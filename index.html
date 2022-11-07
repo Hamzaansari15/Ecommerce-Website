@@ -19,6 +19,7 @@
 <body>
   <!----------- HEADER SECTION START ---------------->
 
+<div id="html">
   <header id="header">
     <a id="header_logo" href="#"><img src="https://1000logos.net/wp-content/uploads/2020/08/ASOS-Logo.png" alt=""
         srcset=""></a>
@@ -31,14 +32,13 @@
             <span id="brand_text">category</span>
           </span>
           <ul class="dropdown-menu">
-            <a class="dropdown-item" href="#">Men's Clothes</a>
-            <a class="dropdown-item" href="#">Women's Clothes</a>
-            <a class="dropdown-item" href="#">Jewelery</a>
-            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#all_card">Men's Clothes</a>
+            <a class="dropdown-item" href="#all_card">Women's Clothes</a>
+            <a class="dropdown-item" href="#all_card">Jewelery</a>
+            <a class="dropdown-item" href="#all_card">Electronics</a>
           </ul>
         </div>
         <li><a href="product/product.html">product</a></li>
-        <li id="signup"><a href="sigup/signup.html">sign in</a></li>
       </ul>
       <div id="icon">
         <span id="search">
@@ -150,11 +150,28 @@
     </div>
   </div>
   <!----------- WORKING END FOR COPY RIGHT ---------------->
+</div>
 
   <!-------------------- WORKING FOR SIGNUP FORM  --------------------->
 
-  
-  
+<div id="buy_modal">
+  <div id="modal_div">
+    <div id="cancel_icon"><i class="fa-solid fa-xmark fa-xl"></i></div>
+    <div id="modal_item">
+      <input placeholder="Enter your name" type="text" name="" id="">
+      <input placeholder="Enter your email" type="email" name="" id="">
+    </div>
+    <div onclick="buyDone()" id="buy_btn">
+      <button type="submit">BUY</button>
+    </div>
+  </div>
+</div>
+   
+
+<div id="loader">
+  <div id="loader_icon"><img src="https://flevix.com/wp-content/uploads/2019/07/Spin-Preloader-1.gif" alt=""></div>
+</div>
+
   <!-------------------- WORKING FOR SIGNUP FORM  --------------------->
 
   <script src="jquery.js"></script>
@@ -162,7 +179,7 @@
   <script>
   </script>
 
-  <script type="module" src="app.js"></script>
+  <script src="app.js"></script>
 
 </body>
 
